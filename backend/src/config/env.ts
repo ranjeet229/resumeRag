@@ -9,6 +9,7 @@ const envSchema = z.object({
   // Server
   PORT: z.string().default('5000'),
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
+  FRONTEND_URL: z.string().url().optional(),
 
   // MongoDB
   MONGODB_URI: z.string().url(),
@@ -34,6 +35,10 @@ const envSchema = z.object({
 
   // OpenAI
   OPENAI_API_KEY: z.string(),
+
+  // Rate Limiting
+  RATE_LIMIT_WINDOW_MS: z.string().transform(Number).default('900000'), // 15 minutes
+  RATE_LIMIT_MAX_REQUESTS: z.string().transform(Number).default('100'),
 });
 
 // Validate and export environment variables
