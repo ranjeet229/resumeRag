@@ -34,15 +34,15 @@
 - [x] Add progress tracking for bulk uploads
 
 ## Phase 4: Vector Embeddings and Search
-- [ ] Set up vector database (e.g., Pinecone)
-- [ ] Implement text chunking for resumes
-- [ ] Create embedding generation service
-- [ ] Implement semantic search functionality
-- [ ] Set up caching for search results
-- [ ] Create search ranking algorithm
-- [ ] Implement filters and faceted search
-- [ ] Add fuzzy matching capabilities
-- [ ] Set up vector index optimization
+- [x] Set up vector database (e.g., Pinecone)
+- [x] Implement text chunking for resumes
+- [x] Create embedding generation service
+- [x] Implement semantic search functionality
+- [x] Set up caching for search results
+- [x] Create search ranking algorithm
+- [x] Implement filters and faceted search
+- [x] Add fuzzy matching capabilities
+- [x] Set up vector index optimization
 
 ## Phase 5: Job Matching and Analysis
 - [ ] Create job requirements parser
