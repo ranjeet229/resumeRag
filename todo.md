@@ -23,15 +23,15 @@
 - [x] Configure rate limiting and security headers
 
 ## Phase 3: Resume Processing and Storage
-- [ ] Implement file upload handling with multer
-- [ ] Create ZIP extraction utility
-- [ ] Implement resume parsing logic
-- [ ] Set up cloud storage for raw files
-- [ ] Create resume text extraction service
-- [ ] Implement batch processing for bulk uploads
-- [ ] Set up file type validation
-- [ ] Create file processing queue system
-- [ ] Add progress tracking for bulk uploads
+- [x] Implement file upload handling with multer
+- [x] Create ZIP extraction utility
+- [x] Implement resume parsing logic
+- [x] Set up cloud storage for raw files
+- [x] Create resume text extraction service
+- [x] Implement batch processing for bulk uploads
+- [x] Set up file type validation
+- [x] Create file processing queue system
+- [x] Add progress tracking for bulk uploads
 
 ## Phase 4: Vector Embeddings and Search
 - [ ] Set up vector database (e.g., Pinecone)
