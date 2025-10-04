@@ -12,15 +12,15 @@
 - [x] Initialize basic Express middleware (cors, compression, etc.)
 
 ## Phase 2: Database Models and Core Backend Setup
-- [ ] Create Resume model schema
-- [ ] Create Job model schema
-- [ ] Create User model schema with role-based access
-- [ ] Set up authentication middleware
-- [ ] Implement PII redaction utility
-- [ ] Set up basic error handling middleware
-- [ ] Create validation middleware using Joi/Zod
-- [ ] Set up logging and monitoring
-- [ ] Configure rate limiting and security headers
+- [x] Create Resume model schema
+- [x] Create Job model schema
+- [x] Create User model schema with role-based access
+- [x] Set up authentication middleware
+- [x] Implement PII redaction utility
+- [x] Set up basic error handling middleware
+- [x] Create validation middleware using Joi/Zod
+- [x] Set up logging and monitoring
+- [x] Configure rate limiting and security headers
 
 ## Phase 3: Resume Processing and Storage
 - [ ] Implement file upload handling with multer
