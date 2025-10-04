@@ -5,9 +5,11 @@ import logger from '../utils/logger';
 
 export interface SearchResult {
   id: string;
+  text: string;
+  chunk: string;
   score: number;
-  metadata: any;
-  matches: {
+  metadata?: Record<string, any>;
+  matches?: {
     text: string;
     score: number;
   }[];
