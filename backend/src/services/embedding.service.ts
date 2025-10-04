@@ -1,4 +1,4 @@
-import { Configuration, OpenAIApi } from 'openai';
+import OpenAI from 'openai';
 import { RedisCache } from './cache.service';
 import { TextChunker } from '../utils/text-chunker';
 import { env } from '../config/env';
@@ -6,14 +6,13 @@ import logger from '../utils/logger';
 
 export class EmbeddingService {
   private static instance: EmbeddingService;
-  private openai: OpenAIApi;
+  private openai: OpenAI;
   private cache: RedisCache;
 
   private constructor() {
-    const configuration = new Configuration({
+    this.openai = new OpenAI({
       apiKey: env.OPENAI_API_KEY,
     });
-    this.openai = new OpenAIApi(configuration);
     this.cache = new RedisCache();
   }
 
@@ -38,12 +37,12 @@ export class EmbeddingService {
       }
 
       // Generate new embedding
-      const response = await this.openai.createEmbedding({
+      const response = await this.openai.embeddings.create({
         model: 'text-embedding-ada-002',
         input: text.replace(/\n/g, ' '),
       });
 
-      const embedding = response.data.data[0].embedding;
+      const embedding = response.data[0].embedding;
 
       // Cache the result for 24 hours
       await this.cache.set(cacheKey, JSON.stringify(embedding), 86400);
